@@ -13,6 +13,7 @@ def pro():
             print("Conexión desde",client_address)
             while True:
                 data = connection.recv(19)
+                print(data.decode(encoding='UTF-8'))
                 if data:
                     print("Enviando mensaje de vuelta")
                     connection.sendall(data)
